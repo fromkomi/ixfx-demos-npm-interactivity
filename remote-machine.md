@@ -1,6 +1,8 @@
 # Running on the cloud
 
-Gitpod is the recommended choice because it has better support for websockets.
+This is an overview of four options for editing and hosting on the cloud: Gitpod, Codesandbox, Glitch and Stackblitz.
+
+**Gitpod** is the recommended choice because it has better support for websockets.
 
 A warning that these cloud providers can delete unused files after a period of inactivity. For Gitpod, it's 14 days. Be sure to download a local copy of your files.
 

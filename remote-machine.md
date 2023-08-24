@@ -1,6 +1,6 @@
 # Running on the cloud
 
-This is an overview of four options for editing and hosting on the cloud: Gitpod, Codesandbox, Glitch and Stackblitz.
+This is an overview of four options for editing and hosting on the cloud: Gitpod, CodeSandbox, Glitch and Stackblitz.
 
 **Gitpod** is the recommended choice because it has better support for websockets.
 
@@ -14,6 +14,8 @@ A warning that these cloud providers can delete unused files after a period of i
 During startup, it will ask if you want to install recommended extensions. Say 'Install' for all of these.
 
 You'll also get a notification 'A service is available on port 5555', with 'Open Preview' and 'Open Browser' as options. Choose 'Open Browser' to view your web server in a new window (recommended).
+
+If the preview shows a listing of files, navigate to 'docs' and from there you should be set.
 
 If for some reason you lose the address to view your running sketches, click on 'Ports: 5555' which should appear in the status bar of Gitpod. This will open a panel, and it should list 'ixfx demos' with a green dot. Click on the globe icon to open it in a browser.
 
@@ -46,6 +48,9 @@ Gitpod has the neat option of editing the files locally, but running them in the
 At the right, you'll see a dialog asking you which process you want to start by default. If you want to just have a webserer, choose 'npm run start'. If you need websocket functionality, use 'npm run ws'.
 
 You'll get a preview window of your server. Use the overlapped boxes icon at the top of the preview to open it in a new window. Close the mini preview.
+
+If the preview shows a listing of files, navigate to 'docs' and from there you should be set.
+
 
 ## Websockets
 

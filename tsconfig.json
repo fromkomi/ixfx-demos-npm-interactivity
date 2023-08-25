@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "ESNext",
     "sourceMap": true,
-    "moduleResolution": "Bundler",
+    "moduleResolution": "classic",
     "target": "ES2022",
     "allowImportingTsExtensions": false,
     "isolatedModules": true,
@@ -15,9 +15,9 @@
       "src"
     ]
   },
-  "include": [
-    "./src"
-  ],
+  // "include": [
+  //   "**/*.ts"
+  // ],
   "exclude": [
     "node_modules",
     "**/node_modules/*",

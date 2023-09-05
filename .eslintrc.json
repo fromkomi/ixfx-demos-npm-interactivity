@@ -16,13 +16,17 @@
       "error",
       "backtick"
     ],
+    "semi": [
+      "error"
+    ],
     "unicorn/consistent-destructuring": "off",
     "unicorn/no-thenable": "off",
     "unicorn/consistent-function-scoping": "off",
     "unicorn/require-post-message-target-origin": "off",
     "indent": [
       "error",
-      2
+      2,
+      {"SwitchCase": 1}
     ]
   }
 }

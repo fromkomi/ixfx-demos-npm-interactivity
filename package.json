@@ -19,18 +19,18 @@
     "serve:ws": "node express-ws-server"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^6.4.0",
+    "@typescript-eslint/parser": "^6.7.0",
     "body-parser": "^1.20.2",
-    "concurrently": "^8.2.0",
+    "concurrently": "^8.2.1",
     "copyfiles": "^2.4.1",
     "cpx2": "^5.0.0",
     "eslint-plugin-unicorn": "^48.0.1",
     "express": "^4.18.2",
     "express-ws": "^5.0.2",
     "five-server": "^0.3.1",
-    "ixfx": "latest",
+    "ixfx": "0.12.2",
     "rimraf": "^5.0.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "stackblitz": {
     "startCommand": "npm run start"

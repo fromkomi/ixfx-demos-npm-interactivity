@@ -1,12 +1,36 @@
-import { Points, radianToDegree} from "https://unpkg.com/ixfx/dist/geometry.js";
+import { pointsTracker } from "../../docs/ixfx/data.js";
+const elementBox = document.querySelector(`#box`);
 
-const a = {x: 10, y: 10};
-const b = {x: 20, y: 20};
+function normalize (value, min, max){
+  let nor = (value-min)/(max-value); 
+  return nor;
+}
+// console.log(normalize(300,0,1800));
 
-// Calculates distance between point a and b
-const distance = Points.distance(a, b); // Returns a number
-console.log(distance);
+// Calculate the center coordinates of the element
+function calculateElementCenter(element) {
+  const rect = element.getBoundingClientRect();
+  const centerX = rect.left + rect.width / 2;
+  const centerY = rect.top + rect.height / 2;
+  const normalizeX = normalize(centerX,0,window.innerWidth);
+  const normalizeY = normalize(centerY,0,window.innerHeight);
+  return { x: normalizeX, y: normalizeY };
+}
 
-// Calculate angle in radians between points a and b
-const angleRad = Points.angle(a, b);
-const angleDeg = radianToDegree(angleRad);
+// Call the function to get the center coordinates
+// const centerCoordinates = calculateElementCenter(element);
+
+// console.log(centerCoordinates.x,centerCoordinates.y);
+document.addEventListener(`pointermove`, async (event) => {
+  let t = pointsTracker();
+  const centerCoordinates = calculateElementCenter(elementBox);
+  // console.log(centerCoordinates);
+  let target = {x: centerCoordinates.x, y:centerCoordinates.y};
+  const info = await t.seen(event.pointerId, { x: event.x, y: event.y });
+
+  let a = info.values[0].x - target.x;
+  let b = info.values[0].y - target.y;
+  let c = Math.hypot(a, b);
+
+  console.log(c);
+});

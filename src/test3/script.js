@@ -3,34 +3,34 @@ const box = canvas.getContext(`2d`);
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let rectX = 50;
-let rectY = 50;
+let rectX = 300;
+let rectY = 300;
 let isDragging = false;
 let offsetX, offsetY;
 
 function drawRectangle() {
   box.clearRect(0, 0, canvas.width, canvas.height);
   box.fillStyle = `pink`;
-  box.fillRect(rectX, rectY, 500, 500);
+  box.fillRect(rectX, rectY, 600, 600);
 }
 
 function calculateSpeed(touchX, touchY) {
-  const centerX = rectX + 100; // x-coordinate of the center
-  const centerY = rectY + 100; // y-coordinate of the center
+  const centerX = rectX + 300; // x-coordinate of the center
+  const centerY = rectY + 300; // y-coordinate of the center
 
   // Calculate distance from touch point to center
   const distance = Math.hypot((touchX - centerX), (touchY - centerY));
 
-  // Speed will be inversely proportional to distance
-  // Adjust the multiplier (e.g., 5) to control sensitivity
-  return 5 / distance;
+  // Speed proportional to distance
+  return 50 / distance;
 }
+
 
 function handleTouchStart(event) {
   const touchX = event.touches[0].clientX;
   const touchY = event.touches[0].clientY;
 
-  if (touchX >= rectX && touchX <= rectX + 100 && touchY >= rectY && touchY <= rectY + 100) {
+  if (touchX >= rectX && touchX <= rectX + 300 && touchY >= rectY && touchY <= rectY + 300) {
     isDragging = true;
 
     // Store the initial touch position relative to the rectangle

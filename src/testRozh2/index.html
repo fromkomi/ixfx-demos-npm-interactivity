@@ -9,13 +9,13 @@
 
 <body>
   <style>
+    *,
     *:before,
-        *:after {
-            touch-action: none;
-            pointer-events: none;
-            user-select: none;
-            -webkit-user-select: none;
-        }
+    *:after,
+    html,
+    body {
+      box-sizing: border-box;
+    }
 
     :root {
       --hue: 200;
@@ -24,8 +24,8 @@
       --fg: hsl(var(--hue), 100%, 30%);
     }
     #box {
-            width: 300px;
-            height: 300px;
+            width: 150px;
+            height: 150px;
             background-color: yellow;
             border: 2px solid black;
             position: absolute;
